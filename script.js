@@ -46,7 +46,7 @@ const mesCours = [
         titre: "-Français-",
         matiereNom: "Technique de communication",
         description: ".",
-        fichier: "cours/.pdf"
+        fichier: "cours/C.pdf"
     }
 
 ];
