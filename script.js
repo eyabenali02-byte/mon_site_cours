@@ -1,52 +1,11 @@
 // 👇 MODIFIE CETTE LISTE avec TES cours
 const mesCours = [
-    {
-        titre: "-Analyse Mathématique-",
-        matiereNom: "Analyse ",
-        description: "Limites, continuité et dérivées. Résumé complet.",
-        fichier: "cours/analyse-chap1.pdf"
-    },
-    {
-        titre: "-Algébre  Mathématique-",
-        matiereNom: "Algébre",
-        description: " Résumé complet.",
-        fichier: "cours/analyse-chap1.pdf"
-    },
+
     {
         titre: "Algorithmique - Structures de données",
         matiereNom: "ASD",
         description: " TD,Cours détaillé.",
         fichier: "coursalgo.pdf"
-    },
-    {
-        titre: "-Atelier de programmation-",
-        matiereNom: " Language C ",
-        description: " Cours détaillé? Tp avec corrigée .",
-        fichier: "cours/algo.pdf"
-    },
-    {
-        titre: "- Département de Physique -",
-        matiereNom: "Electricité éléctronique ",
-        description: ".",
-        fichier: "cours/prof-zaag.pdf"
-    },
-    {
-        titre: "- Département de Physique -",
-        matiereNom: "Propagation et rayonnement ",
-        description: ".",
-        fichier: "cours/propagation.pdf"
-    },
-    {
-        titre: "- Département de Physique -",
-        matiereNom: "Systéme logique ",
-        description: ".",
-        fichier: "cours/syslogique.pdf"
-    },
-    {
-        titre: "-Français-",
-        matiereNom: "Technique de communication",
-        description: ".",
-        fichier: "cours/C.pdf"
     }
 
 ];
