@@ -27,7 +27,7 @@ function afficherCours(liste) {
             <h3>${cours.titre}</h3>
             <p>${cours.description}</p>
             <a href="${cours.fichier}" download>⬇️ Télécharger</a>
-        ;
+        `;
         grille.appendChild(carte);
     });
 }
