@@ -68,7 +68,7 @@ function afficherCours(liste) {
             <span class="matiere">${cours.matiereNom}</span>
             <h3>${cours.titre}</h3>
             <p>${cours.description}</p>
-            <a href="${cours}" download>⬇️ Télécharger</a>
+            <a href="${cours.fichier}" download>⬇️ Télécharger</a>
         `;
         grille.appendChild(carte);
     });
