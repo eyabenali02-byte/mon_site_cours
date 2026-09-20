@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- EN-TÊTE -->
+    <header>
+        <h1>📚 Mes Cours & TD corrigé</h1>
+        <p>Pour aider les nouveaux étudiants 🎓</p>
+    </header>
+
+    <!-- RECHERCHE -->
+    <div class="recherche">
+        <input type="text" id="searchInput" placeholder="🔍 Rechercher un cours...">
+        <select id="filterSelect">
+            <option value="all">Toutes les matières</option>
+            <option value="analyse ">analyse </option>
+            <option value="algébre ">algébre</option>
+            <option value="ASD">algorithme </option>
+            <option value="language C">atelier programmation </option>
+            <option value="propagation ">propagation et rayonnement </option>
+            <option value="systéme logique ">systéme logique </option>
+            <option value="électricité">électricité</option>
+            <option value="français ">technique de communication</option>
+        </select>
+    </div>
+
+    <!-- LISTE DES COURS -->
+    <main>
+        <h2>Mes cours disponibles</h2>
+        <div id="coursesGrid" class="grille"></div>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>© 2025 Mes Cours - Fait avec ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

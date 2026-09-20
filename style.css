@@ -1,0 +1,126 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, #4a6cf7, #7c3aed);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Barre de recherche */
+.recherche {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+}
+
+.recherche input,
+.recherche select {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.recherche input {
+    width: 350px;
+    max-width: 100%;
+}
+
+.recherche input:focus,
+.recherche select:focus {
+    border-color: #4a6cf7;
+}
+
+/* Grille des cours */
+main {
+    padding: 1rem 5% 3rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Carte d'un cours */
+.carte {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-left: 5px solid #4a6cf7;
+    transition: transform 0.3s;
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.carte h3 {
+    color: #4a6cf7;
+    margin-bottom: 0.5rem;
+}
+
+.matiere {
+    display: inline-block;
+    background: #eef2ff;
+    color: #4a6cf7;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.carte p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.carte a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #4a6cf7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.carte a:hover {
+    background: #3b5bdb;
+}
+
+/* Pied de page */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
