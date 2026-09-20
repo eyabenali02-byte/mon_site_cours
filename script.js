@@ -1,56 +1,30 @@
-// 👇 MODIFIE CETTE LISTE avec TES cours
 const mesCours = [
-
-    {
-        titre: "Algorithmique - Structures de données",
-        matiereNom: "ASD",
-        description: " TD,Cours détaillé.",
-        fichier: "coursalgo.pdf"
-    }
-
+  { 
+    matiere: "ASD", 
+    titre: "Algorithmique & Structures de données", 
+    chapitres: [
+      { nom: "Chapitre 1 - Introduction", fichier: "algo_ch1.pdf" },
+      { nom: "Chapitre 2 - Les variables", fichier: "algo_ch2.pdf" },
+      { nom: "Chapitre 3 - Les conditions", fichier: "algo_ch3.pdf" },
+      { nom: "Chapitre 4 - Les boucles", fichier: "algo_ch4.pdf" },
+      { nom: "Chapitre 5 - Les tableaux", fichier: "algo_ch5.pdf" },
+      { nom: "Chapitre 6 - Les fonctions", fichier: "algo_ch6.pdf" },
+      { nom: "Chapitre 7 - Tri et recherche", fichier: "algo_ch7.pdf" },
+      { nom: "Chapitre 8 - Récursivité", fichier: "algo_ch8.pdf" }
+    ] 
+  }
 ];
 
-// Fonction pour afficher les cours
-function afficherCours(liste) {
-    const grille = document.getElementById('coursesGrid');
-    grille.innerHTML = '';
-
-    if (liste.length === 0) {
-        grille.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">Aucun cours trouvé 😕</p>';
-        return;
-    }
-
-    liste.forEach(cours => {
-        const carte = document.createElement('div');
-        carte.className = 'carte';
-        carte.innerHTML = `
-            <span class="matiere">${cours.matiereNom}</span>
-            <h3>${cours.titre}</h3>
-            <p>${cours.description}</p>
-            <a href="${cours.fichier}" download>⬇️ Télécharger</a>
-        `;
-        grille.appendChild(carte);
-    });
-}
-
-// Filtrer les cours
-function filtrer() {
-    const texte = document.getElementById('searchInput').value.toLowerCase();
-    const matiere = document.getElementById('filterSelect').value;
-
-    const resultats = mesCours.filter(c => {
-        const okTexte = c.titre.toLowerCase().includes(texte) ||
-                        c.description.toLowerCase().includes(texte);
-        const okMatiere = matiere === 'all' || c.matiere === matiere;
-        return okTexte && okMatiere;
-    });
-
-    afficherCours(resultats);
-}
-
-// Écouter les changements
-document.getElementById('searchInput').addEventListener('input', filtrer);
-document.getElementById('filterSelect').addEventListener('change', filtrer);
-
-// Afficher au démarrage
-afficherCours(mesCours);
+// NE TOUCHE PAS EN DESSOUS
+const container = document.getElementById("liste-cours");
+mesCours.forEach(cours => {
+  let html = `<div style="border:1px solid #ddd; padding:15px; margin:15px; border-radius:10px;">
+    <h2>${cours.matiere} - ${cours.titre}</h2>`;
+  
+  cours.chapitres.forEach(ch => {
+    html += `<p>${ch.nom} <a href="${ch.fichier}" download style="background:#007bff; color:white; padding:5px 10px; text-decoration:none; border-radius:5px; margin-left:10px;">Télécharger</a></p>`;
+  });
+  
+  html += `</div>`;
+  container.innerHTML += html;
+});
