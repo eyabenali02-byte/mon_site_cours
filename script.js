@@ -13,18 +13,18 @@ const mesCours = [
     {
         titre: "Algèbre Mathématique",
         matiereNom: "Algèbre",
-        description: "Résumé complet.",
+        description: "",
         chapitres: [
-            { titre: "Résumé complet", fichier: "cours/algebre-resume.pdf" }
+            { titre: "", fichier: "" }
         ]
     },
     {
         titre: "Algorithmique - Structures de données",
         matiereNom: "ASD",
-        description: "TD, cours détaillé.",
+        description: "",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/algo-cours.pdf" },
-            { titre: "TD corrigé", fichier: "cours/algo-td.pdf" }
+            { titre: "", fichier: "" },
+            { titre: " ", fichier: "" }
         ]
     },
     {
