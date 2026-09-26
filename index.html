@@ -29,6 +29,21 @@
         <h2>Mes cours disponibles</h2>
         <div id="coursesGrid" class="grille"></div>
     </main>
+      <!-- FORUM ÉTUDIANT -->
+    <section class="forum-section" id="forum">
+        <h2>💬 Forum des étudiants</h2>
+        <p class="forum-intro">Posez vos questions, partagez vos astuces !</p>
+
+        <!-- Formulaire nouveau message -->
+        <div class="forum-publier">
+            <input type="text" id="forumPseudo" placeholder="Ton prénom / pseudo" maxlength="30">
+            <textarea id="forumMessage" placeholder="Écris ton message..." rows="3" maxlength="500"></textarea>
+            <button id="forumPublierBtn">📨 Publier</button>
+        </div>
+
+        <!-- Liste des messages -->
+        <div id="forumMessages" class="forum-messages"></div>
+    </section>
 
     <!-- PIED DE PAGE -->
     <footer>
