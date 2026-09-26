@@ -24,7 +24,7 @@ const mesCours = [
         description: "TD, cours détaillé.",
         chapitres: [
             { titre: "Cours complet", fichier: "cours/algo-cours.pdf" },
-            { titre: "TD corrigé", fichier: "cours/algo-td.pdf" }
+            { titre: "TD corrigé", fichier: "coursalgo.pdf" }
         ]
     },
     {
