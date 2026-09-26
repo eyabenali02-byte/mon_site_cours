@@ -2,7 +2,7 @@ const mesCours = [
     {
         titre: "Analyse Mathématique",
         matiereNom: "Analyse",
-        description: "Limites, continuité et dérivées. Résumé complet.",
+        description: ".",
         chapitres: [
             { titre: "", fichier: "" },
             { titre: "", fichier: "" },
