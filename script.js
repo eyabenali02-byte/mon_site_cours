@@ -4,10 +4,10 @@ const mesCours = [
         matiereNom: "Analyse",
         description: "Limites, continuité et dérivées. Résumé complet.",
         chapitres: [
-            { titre: "", fichier: ".pdf" },
-            { titre: "", fichier: ".pdf" },
-            { titre: "", fichier: ".pdf" },
-            { titre: "", fichier: "resume.pdf" }
+            { titre: "", fichier: "" },
+            { titre: "", fichier: "" },
+            { titre: "", fichier: "" },
+            { titre: "", fichier: "" }
         ]
     },
     {
@@ -15,7 +15,7 @@ const mesCours = [
         matiereNom: "Algèbre",
         description: "Résumé complet.",
         chapitres: [
-            { titre: "", fichier: ".pdf" }
+            { titre: "Résumé complet", fichier: "cours/algebre-resume.pdf" }
         ]
     },
     {
@@ -23,8 +23,8 @@ const mesCours = [
         matiereNom: "ASD",
         description: "TD, cours détaillé.",
         chapitres: [
-            { titre: "Cours ", fichier: "coursalgo.pdf" },
-            { titre: "", fichier: ".pdf" }
+            { titre: "Cours complet", fichier: "cours/algo-cours.pdf" },
+            { titre: "TD corrigé", fichier: "cours/algo-td.pdf" }
         ]
     },
     {
@@ -32,8 +32,8 @@ const mesCours = [
         matiereNom: "Language C",
         description: "Cours détaillé, TP avec corrigé.",
         chapitres: [
-            { titre: "", fichier: ".pdf" },
-            { titre: "", fichier: ".pdf" }
+            { titre: "Cours détaillé", fichier: "cours/langage-c-cours.pdf" },
+            { titre: "TP avec corrigé", fichier: "cours/langage-c-tp.pdf" }
         ]
     },
     {
@@ -41,7 +41,7 @@ const mesCours = [
         matiereNom: "Électricité électronique",
         description: "Cours complet.",
         chapitres: [
-            { titre: "", fichier: ".pdf" }
+            { titre: "Cours complet", fichier: "cours/prof-zaag.pdf" }
         ]
     },
     {
@@ -49,7 +49,7 @@ const mesCours = [
         matiereNom: "Propagation et rayonnement",
         description: "Cours complet.",
         chapitres: [
-            { titre: "", fichier: ".pdf" }
+            { titre: "Cours complet", fichier: "cours/propagation.pdf" }
         ]
     },
     {
@@ -57,7 +57,7 @@ const mesCours = [
         matiereNom: "Système logique",
         description: "Cours complet.",
         chapitres: [
-            { titre: " ", fichier: ".pdf" }
+            { titre: "Cours complet", fichier: "cours/syslogique.pdf" }
         ]
     },
     {
@@ -65,7 +65,7 @@ const mesCours = [
         matiereNom: "Technique de communication",
         description: "Cours complet.",
         chapitres: [
-            { titre: "", fichier: "cours/technique-communication.pdf" }
+            { titre: "Cours complet", fichier: "cours/technique-communication.pdf" }
         ]
     }
 ];
@@ -113,7 +113,6 @@ function afficherCours(liste) {
             : 'Bientôt disponible';
 
         carte.innerHTML = `
-            <span class="matiere">${cours.matiereNom}</span>
             <h3>${cours.titre}</h3>
             <p>${cours.description}</p>
             <span class="compteur">📄 ${compteur}</span>
@@ -146,9 +145,14 @@ function ouvrirModal(cours) {
         cours.chapitres.forEach(chap => {
             const ligne = document.createElement('div');
             ligne.className = 'chapitre-ligne';
+
+            const lienHTML = chap.fichier
+                ? `<a href="${chap.fichier}" download>⬇️ Télécharger</a>`
+                : `<span class="indisponible">Bientôt disponible</span>`;
+
             ligne.innerHTML = `
-                <span class="chapitre-nom">${chap.titre}</span>
-                <a href="${chap.fichier}" download>⬇️ Télécharger</a>
+                <span class="chapitre-nom">${chap.titre || ''}</span>
+                ${lienHTML}
             `;
             modalListe.appendChild(ligne);
         });
