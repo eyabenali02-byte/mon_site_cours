@@ -1,6 +1,6 @@
 const mesCours = [
     {
-        titre: "Analyse Mathématique",
+        titre: " Mathématique",
         matiereNom: "Analyse",
         description: ".",
         chapitres: [
@@ -11,7 +11,7 @@ const mesCours = [
         ]
     },
     {
-        titre: "Algèbre Mathématique",
+        titre: "Mathématique",
         matiereNom: "Algèbre",
         description: "",
         chapitres: [
@@ -30,42 +30,42 @@ const mesCours = [
     {
         titre: "Atelier de programmation",
         matiereNom: "Language C",
-        description: "Cours détaillé, TP avec corrigé.",
+        description: "",
         chapitres: [
-            { titre: "Cours détaillé", fichier: "cours/langage-c-cours.pdf" },
-            { titre: "TP avec corrigé", fichier: "cours/langage-c-tp.pdf" }
+            { titre: "", fichier: "" },
+            { titre: "", fichier: "" }
         ]
     },
     {
         titre: "Département de Physique",
         matiereNom: "Électricité électronique",
-        description: "Cours complet.",
+        description: "",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/prof-zaag.pdf" }
+            { titre: "", fichier: "" }
         ]
     },
     {
         titre: "Département de Physique",
         matiereNom: "Propagation et rayonnement",
-        description: "Cours complet.",
+        description: "",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/propagation.pdf" }
+            { titre: "", fichier: "" }
         ]
     },
     {
         titre: "Département de Physique",
         matiereNom: "Système logique",
-        description: "Cours complet.",
+        description: "",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/syslogique.pdf" }
+            { titre: "", fichier: "" }
         ]
     },
     {
         titre: "Français",
         matiereNom: "Technique de communication",
-        description: "Cours complet.",
+        description: "",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/technique-communication.pdf" }
+            { titre: "", fichier: "" }
         ]
     }
 ];
