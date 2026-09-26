@@ -69,19 +69,26 @@ main h2 {
     gap: 1.5rem;
 }
 
-/* Carte d'un cours */
+/* Carte d'un cours - toute la carte est cliquable */
 .carte {
     background: white;
     border-radius: 15px;
     padding: 1.5rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     border-left: 5px solid #4a6cf7;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-.carte:hover {
+.carte:hover,
+.carte:focus-visible {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.carte:focus-visible {
+    outline: 3px solid #4a6cf7;
+    outline-offset: 2px;
 }
 
 .carte h3 {
@@ -104,27 +111,11 @@ main h2 {
     margin-bottom: 1rem;
 }
 
-.carte a {
+.compteur {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #4a6cf7;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.carte a:hover {
-    background: #3b5bdb;
-}
-
-/* Cours sans fichier disponible pour l'instant */
-.indisponible {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #f1f3f5;
-    color: #888;
-    border-radius: 8px;
+    color: #4a6cf7;
     font-size: 0.9rem;
+    font-weight: bold;
 }
 
 /* Message quand aucun résultat ne correspond à la recherche */
@@ -133,6 +124,98 @@ main h2 {
     grid-column: 1 / -1;
     color: #666;
     padding: 2rem 0;
+}
+
+/* MODAL - détail d'un cours avec ses chapitres/fichiers */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 100;
+}
+
+.modal.ouvert {
+    display: flex;
+}
+
+.modal-contenu {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-contenu h3 {
+    color: #4a6cf7;
+    margin: 0.5rem 0;
+}
+
+.modal-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.modal-fermer {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #f1f3f5;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal-fermer:hover {
+    background: #e2e6ea;
+}
+
+.modal-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.chapitre-ligne {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    background: #f8f9fb;
+    border-radius: 10px;
+    border-left: 3px solid #4a6cf7;
+}
+
+.chapitre-nom {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.chapitre-ligne a {
+    flex-shrink: 0;
+    padding: 0.4rem 0.9rem;
+    background: #4a6cf7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.chapitre-ligne a:hover {
+    background: #3b5bdb;
 }
 
 /* Pied de page */

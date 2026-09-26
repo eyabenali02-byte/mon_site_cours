@@ -35,6 +35,17 @@
         <p>© 2025 Mes Cours - Fait avec ❤️</p>
     </footer>
 
+    <!-- MODAL : détail d'un cours avec ses chapitres/fichiers -->
+    <div id="modal" class="modal">
+        <div class="modal-contenu" role="dialog" aria-modal="true" aria-labelledby="modalTitre">
+            <button id="modalFermer" class="modal-fermer" aria-label="Fermer">✕</button>
+            <span id="modalMatiere" class="matiere"></span>
+            <h3 id="modalTitre"></h3>
+            <p id="modalDescription" class="modal-description"></p>
+            <div id="modalListe" class="modal-liste"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
