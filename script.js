@@ -4,10 +4,10 @@ const mesCours = [
         matiereNom: "Analyse",
         description: "Limites, continuité et dérivées. Résumé complet.",
         chapitres: [
-            { titre: "Chapitre 1 - Limites", fichier: "cours/analyse-chap1.pdf" },
-            { titre: "Chapitre 2 - Continuité", fichier: "cours/analyse-chap2.pdf" },
-            { titre: "Chapitre 3 - Dérivées", fichier: "cours/analyse-chap3.pdf" },
-            { titre: "Résumé complet", fichier: "cours/analyse-resume.pdf" }
+            { titre: "", fichier: ".pdf" },
+            { titre: "", fichier: ".pdf" },
+            { titre: "", fichier: ".pdf" },
+            { titre: "", fichier: "resume.pdf" }
         ]
     },
     {
@@ -15,7 +15,7 @@ const mesCours = [
         matiereNom: "Algèbre",
         description: "Résumé complet.",
         chapitres: [
-            { titre: "Résumé complet", fichier: "cours/algebre-resume.pdf" }
+            { titre: "", fichier: ".pdf" }
         ]
     },
     {
@@ -23,8 +23,8 @@ const mesCours = [
         matiereNom: "ASD",
         description: "TD, cours détaillé.",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/algo-cours.pdf" },
-            { titre: "TD corrigé", fichier: "coursalgo.pdf" }
+            { titre: "Cours ", fichier: "coursalgo.pdf" },
+            { titre: "", fichier: ".pdf" }
         ]
     },
     {
@@ -32,8 +32,8 @@ const mesCours = [
         matiereNom: "Language C",
         description: "Cours détaillé, TP avec corrigé.",
         chapitres: [
-            { titre: "Cours détaillé", fichier: "cours/langage-c-cours.pdf" },
-            { titre: "TP avec corrigé", fichier: "cours/langage-c-tp.pdf" }
+            { titre: "", fichier: ".pdf" },
+            { titre: "", fichier: ".pdf" }
         ]
     },
     {
@@ -41,7 +41,7 @@ const mesCours = [
         matiereNom: "Électricité électronique",
         description: "Cours complet.",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/prof-zaag.pdf" }
+            { titre: "", fichier: ".pdf" }
         ]
     },
     {
@@ -49,7 +49,7 @@ const mesCours = [
         matiereNom: "Propagation et rayonnement",
         description: "Cours complet.",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/propagation.pdf" }
+            { titre: "", fichier: ".pdf" }
         ]
     },
     {
@@ -57,7 +57,7 @@ const mesCours = [
         matiereNom: "Système logique",
         description: "Cours complet.",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/syslogique.pdf" }
+            { titre: " ", fichier: ".pdf" }
         ]
     },
     {
@@ -65,7 +65,7 @@ const mesCours = [
         matiereNom: "Technique de communication",
         description: "Cours complet.",
         chapitres: [
-            { titre: "Cours complet", fichier: "cours/technique-communication.pdf" }
+            { titre: "", fichier: "cours/technique-communication.pdf" }
         ]
     }
 ];
