@@ -23,7 +23,7 @@ const mesCours = [
         matiereNom: "ASD",
         description: "",
         chapitres: [
-            { titre: "", fichier: "" },
+            { titre: "notion de base ", fichier: "coursalgo.pdf" },
             { titre: " ", fichier: "" }
         ]
     },
